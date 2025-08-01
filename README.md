@@ -54,11 +54,11 @@ Originally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at 
 
 vLLM is fast with:
 
-- State-of-the-art serving throughput
-- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)
-- Continuous batching of incoming requests
+- State-of-the-art serving throughput  吞吐量达到SOTA级别
+- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)  分页内存管理机制【kv缓存块与序列块表】
+- Continuous batching of incoming requests  连续批处理【token级别】
 - Fast model execution with CUDA/HIP graph
-- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516),INT4, INT8, and FP8.
+- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516),INT4, INT8, and FP8.  量化功能
 - Optimized CUDA kernels, including integration with FlashAttention and FlashInfer.
 - Speculative decoding
 - Chunked prefill
@@ -69,18 +69,18 @@ vLLM is flexible and easy to use with:
 
 - Seamless integration with popular Hugging Face models
 - High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more
-- Tensor parallelism and pipeline parallelism support for distributed inference
+- Tensor parallelism and pipeline parallelism support for distributed inference  分布式推理支持张量并行和流水线并行
 - Streaming outputs
-- OpenAI-compatible API server
+- OpenAI-compatible API server  兼容openai的api服务
 - Support NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron.
 - Prefix caching support
 - Multi-LoRA support
 
 vLLM seamlessly supports most popular open-source models on HuggingFace, including:
-- Transformer-like LLMs (e.g., Llama)
-- Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)
-- Embedding Models (e.g. E5-Mistral)
-- Multi-modal LLMs (e.g., LLaVA)
+- Transformer-like LLMs (e.g., Llama)  支持transformer模型
+- Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)  支持混合专家模型
+- Embedding Models (e.g. E5-Mistral)  支持embedding模型
+- Multi-modal LLMs (e.g., LLaVA)  支持多模态模型
 
 Find the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).
 
